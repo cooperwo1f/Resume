@@ -2,7 +2,7 @@
 % Edited: 31/05/2020
 
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{my_cv}[2011/03/26 My custom CV class]
+\ProvidesClass{resume}[2023/11/21 Custom resume class]
 
 \LoadClass{article}
 
@@ -45,14 +45,14 @@
 }
 
 \RequirePackage{graphicx}
- 
+
 \newcommand{\datedsection}[2]{%
   \section[#1]{#1 \hfill #2}%
 }
 
 \newcommand{\edsubsection}[5]{%
 %   \vspace{-5pt}
-\begin{tabular*}{\textwidth}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 	\vspace{-0.5pt}
 	{\scshape{\bfseries #1}} & #2 \\
 	{#3} & {\small#4} \\
@@ -62,7 +62,7 @@
 
 \newcommand{\worksubsection}[5]{%
 %   \vspace{-5pt}
-\begin{tabular*}{\textwidth}{l@{\cftdotfill{\cftsecdotsep}\extracolsep{\fill}}r}
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 	\textbf{\textsc{#1}} & #2 \\
 	{#3} & {\small#4} \\
 \end{tabular*}\\
@@ -78,7 +78,6 @@
 %   \vspace{-5pt}
 %   #2 \hfill #3 \\
 %   #4
-}
 
 \pagestyle{empty}
 
@@ -87,11 +86,11 @@
   \centerline{\Huge{#1}}
 }
 
-\newcommand\contact[5]{%
+\newcommand\contact[2]{%
+  \vspace{3pt}
     \centerline{%
         \makebox[0pt][c]{%
-            #1 {\large\textperiodcentered} #2 {\large\textperiodcentered} #3
-            \ {\large\textperiodcentered} #4 \ {\large\textperiodcentered} \ #5%
+            #1 {\large\textperiodcentered} #2 {\large}%
         }%
     }%
 }
