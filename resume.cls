@@ -87,7 +87,6 @@
 }
 
 \newcommand\contact[2]{%
-  \vspace{3pt}
     \centerline{%
         \makebox[0pt][c]{%
             #1 {\large\textperiodcentered} #2 {\large}%
