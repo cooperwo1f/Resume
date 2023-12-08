@@ -14,7 +14,9 @@ all: $(TEX_FILES:%.tex=$(BUILD_DIR)/%.pdf)
 
 # Rule for building LaTeX files
 $(BUILD_DIR)/%.pdf: %.tex $(SUB_DIRS) | $(BUILD_DIR)
-	cp -f -r -t $(BUILD_DIR)/ $(TEX_FILES) $(SUB_DIRS)
+	cp -f -r $(TEX_FILES) $(BUILD_DIR)
+	cp -f -r $(SUB_DIRS) $(BUILD_DIR)
+
 	cd $(BUILD_DIR) && rubber --pdf $(<F)
 
 # Rule to create the build directory
