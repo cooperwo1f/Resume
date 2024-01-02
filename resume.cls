@@ -1,5 +1,5 @@
-% Author: Saikat Roy
-% Edited: 31/05/2020
+% Author: Cooper Wolfden
+% Edited: 02/01/2024
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{resume}[2023/11/21 Custom resume class]
@@ -51,34 +51,32 @@
   \section[#1]{#1 \hfill #2}%
 }
 
-\newcommand{\education}[9]{%
+\newcommand{\education}[5]{%
 %   \vspace{-5pt}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 	\vspace{-0.5pt}
 	{\scshape{\bfseries #1}} & #2 \\
 	{#3} & {\small#4} \\
-  \hspace{10pt}\small{\textit{#5}} \\
-  \hspace{10pt}\small{\textit{#6}} \\
-  \hspace{10pt}\small{\textit{#7}} \\
-  \hspace{10pt}\small{\textit{#8}} \\
-  \hspace{28pt}\footnotesize\makecell[l]{#9} \\
+  \hspace{10pt}\small{\textit{\makecell[l]{#5}}} \\
 \end{tabular*}
 }
 
 \newcommand{\work}[5]{%
 %   \vspace{-5pt}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\textbf{\textsc{#1}} & #2 \\
+	\vspace{-0.5pt}
+	{\scshape{\bfseries #1}} & #2 \\
 	{#3} & {\small#4} \\
-\end{tabular*}\\
-\parbox{0.75\textwidth}{
-\small
-    \begin{itemize}
-    \vspace{-2pt}
-    #5
-    \end{itemize}
+  \hspace{10pt}\small{\textit{\makecell[l]{#5}}} \\
+\end{tabular*}
 }
-}
+%\parbox{0.75\textwidth}{
+%\small
+%    \begin{itemize}
+%    \vspace{-2pt}
+%    #5
+%    \end{itemize}
+%}
 %   \subsubsection[#1]{#1}%
 %   \vspace{-5pt}
 %   #2 \hfill #3 \\
@@ -100,10 +98,3 @@
 }
 
 \newcommand{\resitem}[1]{\small \item[\textbf{--}] #1 \vspace{-4pt}}
-
-\newcommand{\longcontact}[5]{%
-    \noindent
-    #1\hfill {\large\textperiodcentered}\hfill #2\hfill
-    {\large\textperiodcentered}\hfill #3\\
-    #4\hfill #5%
-}
