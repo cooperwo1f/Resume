@@ -45,22 +45,27 @@
 }
 
 \RequirePackage{graphicx}
+\RequirePackage{makecell}
 
 \newcommand{\datedsection}[2]{%
   \section[#1]{#1 \hfill #2}%
 }
 
-\newcommand{\edsubsection}[5]{%
+\newcommand{\education}[9]{%
 %   \vspace{-5pt}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 	\vspace{-0.5pt}
 	{\scshape{\bfseries #1}} & #2 \\
 	{#3} & {\small#4} \\
-	{\hspace{10pt}\small{\textit{\textbf{--} Thesis: #5}}} & \\
+  \hspace{10pt}\small{\textit{#5}} \\
+  \hspace{10pt}\small{\textit{#6}} \\
+  \hspace{10pt}\small{\textit{#7}} \\
+  \hspace{10pt}\small{\textit{#8}} \\
+  \hspace{28pt}\footnotesize\makecell[l]{#9} \\
 \end{tabular*}
 }
 
-\newcommand{\worksubsection}[5]{%
+\newcommand{\work}[5]{%
 %   \vspace{-5pt}
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
 	\textbf{\textsc{#1}} & #2 \\
