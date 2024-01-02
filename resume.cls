@@ -47,6 +47,8 @@
 \RequirePackage{graphicx}
 \RequirePackage{makecell}
 
+\DeclareDocumentCommand{\author}{m}{\newcommand{\authorname}{#1}\renewcommand{\@author}{#1}}
+
 \newcommand{\datedsection}[2]{%
   \section[#1]{#1 \hfill #2}%
 }
@@ -84,6 +86,17 @@
 
 \pagestyle{empty}
 
+\newcommand{\skills}[1]{%
+  \begin{itemize}
+          {#1}
+  \end{itemize}
+}
+
+\newcommand{\projects}[1]{%
+  \begin{itemize}[leftmargin=10pt, itemsep=0pt]
+          {#1}
+  \end{itemize}
+}
 
 \newcommand{\name}[1]{%
   \centerline{\Huge{#1}}
