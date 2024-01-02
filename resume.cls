@@ -87,13 +87,13 @@
 \pagestyle{empty}
 
 \newcommand{\skills}[1]{%
-  \begin{itemize}
+  \begin{itemize}[leftmargin=10pt]
           {#1}
   \end{itemize}
 }
 
 \newcommand{\projects}[1]{%
-  \begin{itemize}[leftmargin=10pt, itemsep=0pt]
+  \begin{itemize}[leftmargin=10pt, itemsep=2pt]
           {#1}
   \end{itemize}
 }
