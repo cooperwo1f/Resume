@@ -55,22 +55,22 @@
 
 \newcommand{\education}[5]{%
 %   \vspace{-5pt}
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\vspace{-0.5pt}
-	{\scshape{\bfseries #1}} & #2 \\
-	{#3} & {\small#4} \\
-  \hspace{10pt}\small{\textit{\makecell[l]{#5}}} \\
-\end{tabular*}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \vspace{-0.5pt}
+    {\scshape{\bfseries #1}} & #2 \\
+    {#3} & {\small#4} \\
+    \hspace{10pt}\small{\textit{\makecell[l]{#5}}} \\
+  \end{tabular*}
 }
 
 \newcommand{\work}[5]{%
 %   \vspace{-5pt}
-\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-	\vspace{-0.5pt}
-	{\scshape{\bfseries #1}} & #2 \\
-	{#3} & {\small#4} \\
-  \hspace{10pt}\small{\textit{\makecell[l]{#5}}} \\
-\end{tabular*}
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \vspace{-0.5pt}
+    {\scshape{\bfseries #1}} & #2 \\
+    {#3} & {\small#4} \\
+    \hspace{10pt}\small{\textit{\makecell[l]{#5}}} \\
+  \end{tabular*}
 }
 %\parbox{0.75\textwidth}{
 %\small
@@ -93,9 +93,14 @@
 }
 
 \newcommand{\projects}[1]{%
-  \begin{itemize}[leftmargin=10pt, itemsep=2pt]
-          {#1}
-  \end{itemize}
+  {#1}
+}
+
+\newcommand{\project}[2]{%
+  \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \vspace{1pt}
+    {#1} & {\small#2}
+  \end{tabular*}
 }
 
 \newcommand{\name}[1]{%
