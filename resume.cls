@@ -100,7 +100,7 @@
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \vspace{1pt}
     {#1} & {\small#2}
-  \end{tabular*}
+  \end{tabular*}\\
 }
 
 \newcommand{\name}[1]{%
