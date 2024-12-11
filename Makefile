@@ -1,4 +1,4 @@
-# Makefile for building LaTeX files with rubber
+# Makefile for building LaTeX files with Rubber
 
 # Define the directories
 BUILD_DIR := build
