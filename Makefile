@@ -1,5 +1,8 @@
 # Makefile for building LaTeX files with rubber
 
+# Python version
+PYTHON = python3
+
 # Define the directories
 BUILD_DIR := build
 
@@ -18,7 +21,9 @@ $(BUILD_DIR)/%.pdf: %.tex $(SUB_DIRS) | $(BUILD_DIR)
 	@cp -f -r $(TEX_FILES) $(BUILD_DIR)
 	@cp -f -r $(SUB_DIRS) $(BUILD_DIR)
 
-	@cd $(BUILD_DIR) && rubber --pdf $(<F)
+	@$(PYTHON) -m venv .env && source .env/bin/activate && cd $(BUILD_DIR) && rubber --pdf $(<F)
+	@echo "copying pdf to root"
+	@cp $@ ./
 
 # Rule to create the build directory
 $(BUILD_DIR):
@@ -33,3 +38,8 @@ clean:
 
 .PHONY: rebuild
 rebuild: clean all
+
+.PHONY: setup
+setup:
+	@echo "installing latex rubber"
+	@$(PYTHON) -m venv .env && source .env/bin/activate && $(PYTHON) -m pip install latex-rubber
