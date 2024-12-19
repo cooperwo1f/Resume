@@ -29,7 +29,7 @@
       \item{Wanted to experiment with Linux pipes and use them for real-time processing}
       \item{Audio samples piped to stdin and processed samples written to stdout, \\
         which can then be piped to stdin of aplay (or similar) for listening}
-      \item{Design allows for several different (or the same) applications to be chained together for interesting results}
+      \item{Design allows for several applications to be chained together for interesting results}
     }
     \project{Roster calendar synchroniser rewrite}{2024}{
       \item{Rewrote original project in Python, with minimum external dependencies}
@@ -40,15 +40,14 @@
     \project{Lighting controller using Novation Launchpad and Launch Control}{2024}{
       \item{Want to be able to control lights using additional buttons and faders}
       \item{Actual implementation is quite easy, lighting consoles support OSC, messages sent over the network}
-      \item{Age of Launchpad causes Windows 10 driver to be unstable, works much more reliably under Linux}
-      \item{Originally Launchpad button presses from Raspberry Pi to Windows using custom socket implementation}
+      \item{Windows 10 driver to be unstable, works much more reliably under Linux}
       \item{Eventually moved to Unix sockets communicating between programs \\
-        running on the same Raspberry Pi to decrease latency}
+        running on the same Linux SBC to decrease latency}
       \item{Used Systemd units to manage starting, stopping, and restarting relevant hardware services \\
         when corresponding hardware is connected}
       \item{``Core'' system service is started at boot, all inputs are sanitised, \\
         all possible error states either correct themselves or trigger a service restart}
-      \item{Rewrote launchpad receiver code in C using ALSA library to reduce IO CPU usage using by utilising poll}
+      \item{Launchpad code written in C using ALSA to reduce IO CPU usage using by utilising poll}
     }
     \project{Wilderness Society GPS image processing and correlation}{2024}{
       \item{First time building a graphical interface for an application}
