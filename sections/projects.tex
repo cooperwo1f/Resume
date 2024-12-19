@@ -1,28 +1,55 @@
 \section{Projects}
 \projects{
-    \project{Server-less application for synchronising spreadsheet roster to calendar using Google Cloud Platform}{2019}
+    \project{Server-less application for synchronising spreadsheet roster to calendar}{2019}
       \vspace{-16.5pt}\begin{itemize}[noitemsep]
-        \item{Written in Javascript}
-        \item{Using App Engine}
-        \item{Using gmail webhook that only runs when roster email is received}
+        \item{Written in JavaScript}
+        \item{Over 1,300 lines of code}
+        \item{Uses Google Cloud free tier (strict resource management)}
+        \item{Learnt many lessons about code management and versioning (ie. scope, version control utilisation)}
       \end{itemize}
     \project{Rust application for filtering pricing information from RS Components for low cost rapid prototyping}{2022}
       \vspace{-16.5pt}\begin{itemize}[noitemsep]
         \item{Written in Rust}
-        \item{Takes command line arguments and generates RS components search url}
-        \item{Receives webpage and filters html to build objects from each search result}
-        \item{Adds results to database, allowing advanced searches with custom filtering}
+        \item{Essentially opposite of previous project - high(er) performance CLI tool}
+        \item{Code written with minimal dependencies with greater attempt to be bug free}
+        \item{Lesson learnt from previous project, do one thing and do it well}
       \end{itemize}
-    \project{LiDAR environment mapper and visualiser using ROS}{2022}
     \project{Custom PCB to receive and transmit CAN bus data}{2022}
       \vspace{-16.5pt}\begin{itemize}[noitemsep]
-        \item{PCB has footprint of less than \(30 mm^{2}\)}
-        \item{Can be used to drive system outputs}
-        \item{Embedded into sensor/actuator enclosure for simple system integration}
+        \item{PCB has footprint of less than \(30 mm^{2}\) (efficient use of space, placement and routing considerations)}
+        \item{Programming via SWO for smaller footprint, step debugging, and ITM trace printing}
+        \item{Used to serialise sensor readings and provide longer transmission distances in high noise environments}
       \end{itemize}
     \project{High current buck converter to drive 12V audio amplifier from 18V DC supply}{2023}
-    \project{DMX lighting controller using Novation Launchpad}{2023}
-    \project{Tri-output function generator with input voltage control}{\emph{Ongoing}}
-    \project{Digitally controllable linear regulator}{\emph{Ongoing}}
-    \project{Wireless projection mapping}{\emph{Ongoing}}
+      \vspace{-16.5pt}\begin{itemize}[noitemsep]
+        \item{Allows 18V power tool batteries to efficiently power 12V devices}
+        \item{Design process involved considering alternatives methods such as linear regulation,\\
+          reviewing costs of existing devices, selecting complimentary components to increase device performance}
+        \item{Fulfils application requirements while remaining passively cooled}
+        \item{PCB designed to fit tolerances of existing enclosure}
+      \end{itemize}
+    \project{Real-time audio signal processing in C}{2024}
+    \project{Roster calendar synchroniser rewrite}{2024}
+      \vspace{-16.5pt}\begin{itemize}[noitemsep]
+        \item{Rewrote original project in Python, with minimum external dependencies}
+        \item{Works as a grouping of tools for doing each individual step}
+        \item{Provides isolation between each tool, allowing them to be tested and debugged easily}
+        \item{Actual application is just a script that runs each tool in a chain}
+      \end{itemize}
+    \project{Lighting controller using Novation Launchpad}{2024}
+    \project{Wilderness Society GPS image processing and correlation}{2024}
+      \vspace{-16.5pt}\begin{itemize}[noitemsep]
+        \item{First time building a graphical interface for an application}
+        \item{Meets requirements of non-technical people, tool adapts to their needs rather than them adapting to it}
+        \item{Real-time image processing and transformation in OpenCV}
+      \end{itemize}
+    \project{Small-footprint microcontroller module}{2024}
+      \vspace{-16.5pt}\begin{itemize}[noitemsep]
+        \item{Standardise software development of future projects by building from the same base each time}
+      \end{itemize}
+    \project{2.4GHz transceiver module}{\emph{Ongoing}}
+      \vspace{-16.5pt}\begin{itemize}[noitemsep]
+        \item{First time designing antenna - project primarily used for experience}
+        \item{Integrating with previously designed module to add wireless capability to future projects}
+      \end{itemize}
 }
