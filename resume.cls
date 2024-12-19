@@ -96,11 +96,14 @@
   {#1}
 }
 
-\newcommand{\project}[2]{%
+\newcommand{\project}[3]{%
   \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
     \vspace{1pt}
     {#1} & {\small#2}
   \end{tabular*}\\
+    \vspace{-16.5pt}\begin{itemize}[noitemsep]
+      {#3}
+    \end{itemize}
 }
 
 \newcommand{\name}[1]{%
